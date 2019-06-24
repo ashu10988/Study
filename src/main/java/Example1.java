@@ -1,5 +1,7 @@
 
 public class Example1 {
+	
+	int a;
 
 	public static void main(String[] args) {
 
@@ -11,5 +13,4 @@ public class Example1 {
 			
 		
 	}
-
 }
