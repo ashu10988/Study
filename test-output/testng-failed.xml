@@ -3,11 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="selenium_study.Calendar">
+      <class name="selenium_study.Enterdataintextfield">
         <methods>
-          <include name="call"/>
+          <include name="enterdataintextfield"/>
         </methods>
-      </class> <!-- selenium_study.Calendar -->
+      </class> <!-- selenium_study.Enterdataintextfield -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -14,7 +14,7 @@ public class Calendar {
 //	String date = "21";
 //	 
 
-	String month;
+	String month; 
 	String date;
 
 	public void data(String month, String date) {
