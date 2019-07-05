@@ -26,10 +26,10 @@ public class Webtable {
 		 System.out.println(" Total row number: "+rownumber);
 		 System.out.println(" Total col number: "+colnumber);
 		 
-		 
-		 // get the row data from webtable
-		String rowdata = driver.findElement(By.xpath("//a[contains(text(),'Relaxo Footwears')]/parent::*/following-sibling::td[3]")).getText();
-		 System.out.println("Relaxo Footwear current price is: "+rowdata);
+		// get the row data from webtable
+		 driver.findElement(By.xpath("//a[contains(text(),'Kotak Mahindra Bank')]/parent::*/following-sibling::td[3]")).click();
+		String rowdata = driver.findElement(By.xpath("//a[contains(text(),'Kotak Mahindra Bank')]/parent::*/following-sibling::td[3]")).getText();
+		 System.out.println("Kotak Mahindra Bank price is: "+rowdata);
 		
 		
 	}

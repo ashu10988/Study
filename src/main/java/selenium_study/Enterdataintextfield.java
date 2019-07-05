@@ -1,6 +1,8 @@
 package selenium_study;
 
-	import org.openqa.selenium.By;
+	import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
 	import org.openqa.selenium.WebDriver;
 	import org.openqa.selenium.WebElement;
 	import org.openqa.selenium.chrome.ChromeDriver;
@@ -18,6 +20,8 @@ package selenium_study;
 			System.setProperty("webdriver.chrome.driver", "E:\\newjlearn\\Selenium\\driver\\chromedriver.exe");
 			driver = new ChromeDriver();
 			driver.get("https://www.facebook.com/");
+			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+			driver.manage().window().maximize();
 			driver.findElement(By.cssSelector("#email")).sendKeys("ashu.chaturvedi109@gmail.com");
 			driver.findElement(By.cssSelector("#pass")).sendKeys("hariom123");
 			driver.findElement(By.cssSelector("input[name='firstname']")).sendKeys("Ashu");
@@ -34,10 +38,11 @@ package selenium_study;
 			WebElement month = driver.findElement(By.cssSelector("#month"));// Webelement creation 
 			Select select1= new Select(month);
 			select1.selectByIndex(9);
-			WebElement year = driver.findElement(By.xpath("//[@id='year']"));// Webelement creation 
+			WebElement year = driver.findElement(By.xpath("//select[@id='year' and @title='Year']"));// Webelement creation 
 			Select select2= new Select(year);
-			select2.selectByVisibleText("1988");	
+			select2.selectByVisibleText("1988");
 			Thread.sleep(200);
+			
 		}
 
 	}
